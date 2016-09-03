@@ -1,0 +1,3 @@
+rootProject.name = 'RutgersRailOrBus'
+
+include ':app'
