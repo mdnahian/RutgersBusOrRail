@@ -77,8 +77,7 @@ module.exports = React.createClass({
 
 var styles = StyleSheet.create({
 	wrapper: {
-		flex: 1,
-		marginTop: 25
+		flex: 1
 	},
 	tabbar: {
 		backgroundColor: '#eeeeee',
