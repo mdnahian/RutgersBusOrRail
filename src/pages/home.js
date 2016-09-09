@@ -8,6 +8,7 @@ import {
 	TouchableHighlight
 } from 'react-native';
 import Store from 'react-native-store';
+import TimerMixin from 'react-timer-mixin';
 
 var bus = require('json!../../../data/bus.json');
 var rail = require('json!../../../data/rail.json');
@@ -17,8 +18,13 @@ const DB = {
 }
 
 module.exports = React.createClass({
+	mixins: [TimerMixin],
 	componentWillMount: function () {
 		this.refresh();
+		this.setInterval(
+	      () => { this.refresh(); },
+	      5000
+	    );
 	},
 	convert12to24: function(raw_time){
 		var current_time = new Date();
@@ -169,7 +175,7 @@ var styles = StyleSheet.create({
 		backgroundColor: '#ffffff'
 	},
 	recommendation: {
-		flex: 10,
+		flex: 8,
 		backgroundColor: '#CA0A30',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -198,8 +204,8 @@ var styles = StyleSheet.create({
 		textAlign: 'center'
 	},
 	indent: {
-		marginBottom: 10,
-		marginTop: 10
+		marginBottom: 5,
+		marginTop: 5
 	},
 	items: {
 		flex: 1,

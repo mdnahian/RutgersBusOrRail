@@ -45,7 +45,7 @@ module.exports = React.createClass({
 			</View>
 
 			<View style={styles.container}>
-				<Text style={{marginBottom:10, fontSize:18}}>{this.state.starting} {this.state.route}</Text>
+				<Text style={{marginBottom:10, fontSize:18, textAlign:'center'}}>{this.state.starting} {this.state.route}</Text>
 				<View style={styles.item}>
 					<Text>Select a starting point ...</Text>
 

@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">RutgersRailOrBus</string>
+    <string name="app_name">Rutgers: Bus or Rail</string>
+    <string name="short_name">RU-N Bus or Rail</string>
 </resources>
